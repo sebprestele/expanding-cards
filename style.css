@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@400;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vH;
+    margin: 0;
+    overflow: hidden;
+}
+
+.images-container {
+   display: flex;
+   justify-content: space-between;
+   color: white;
+   margin: 2em;
+   width: 90vw
+  
+}
+
+
+
+.panel  {
+    background-size: auto 100%;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    flex: 0.5;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 50px;
+    cursor: pointer;
+     margin: 10px;
+     position: relative;
+     transition: .45s ease-in-out;   
+    
+    }
+
+.panel.active {
+    flex: 5;
+    width: 80vw;
+
+}
+
+h3 { 
+    position: absolute;
+    text-transform: uppercase;
+    background-color: rgba(0,0,0, 0.4);
+    padding: .25em;
+    opacity: 0;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    text-align: left;
+}
+
+@media (max-width: 480px) {
+
+    .panel {
+        max-height: 80%;
+        background-position: left;
+         
+    }
+    .panel:nth-child(4) {
+        display: none;
+    }
+
+    .panel:nth-child(5) {
+        display: none;
+    }
+
+h3 {
+    font-size: 1rem;
+   text-transform: none;
+}
+    
+}
